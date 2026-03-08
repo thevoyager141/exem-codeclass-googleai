@@ -11,10 +11,20 @@ export default function HeroSection({
 }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <UnicornEmbed />
+      {isDarkMode ? (
+        <UnicornEmbed />
+      ) : (
+        <div
+          className="absolute inset-0 z-[1] pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(251,146,60,0.35) 0%, rgba(251,191,36,0.15) 40%, transparent 70%)",
+          }}
+        />
+      )}
 
       {/* Watermark Cover - Forced to cover the Unicorn Studio badge */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-[#0a0a0a] z-[999] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-black z-[999] pointer-events-none"></div>
 
       <div className="absolute top-6 right-6 z-50">
         <motion.button
@@ -63,7 +73,7 @@ export default function HeroSection({
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white leading-[1.1] mb-8">
             '나중에 해야지' 했던 <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-200">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-amber-200">
               Claude Code,
             </span>
             <br />

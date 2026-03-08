@@ -23,7 +23,7 @@ export default function App() {
   }, [isDarkMode]);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-zinc-300 font-sans selection:bg-orange-500/30">
+    <div className="min-h-screen bg-black text-zinc-300 font-sans selection:bg-orange-500/30">
       <HeroSection
         isDarkMode={isDarkMode}
         onToggleTheme={() => setIsDarkMode(!isDarkMode)}
