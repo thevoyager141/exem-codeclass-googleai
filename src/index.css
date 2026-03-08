@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+code {
+  font-size: 0.85em;
+}
+
 /* Hide Unicorn Studio Logo */
 a[href*="unicorn.studio"] {
   display: none !important;
