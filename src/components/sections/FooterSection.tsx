@@ -1,4 +1,8 @@
-export default function FooterSection() {
+export default function FooterSection({
+  onNavigateReference,
+}: {
+  onNavigateReference: () => void;
+}) {
   return (
     <footer className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-orange-900/20 pointer-events-none"></div>
@@ -24,14 +28,12 @@ export default function FooterSection() {
           <div>© 2026 Exem · Claude Code AI Training</div>
           <div className="flex items-center gap-6">
             <span>피드백/오류 보고 → 조현서 그룹장</span>
-            <a
-              href="https://blog.huns.site/blog/posts/ai/claude"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white transition-colors"
+            <button
+              onClick={onNavigateReference}
+              className="hover:text-white transition-colors cursor-pointer"
             >
-              추가 팁 → blog.huns.site
-            </a>
+              추천 레퍼런스 →
+            </button>
           </div>
         </div>
       </div>

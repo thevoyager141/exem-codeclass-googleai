@@ -10,10 +10,12 @@ import OneMoreThingSection from "./components/sections/OneMoreThingSection";
 import TroubleshootingSection from "./components/sections/TroubleshootingSection";
 import FAQSection from "./components/sections/FAQSection";
 import FooterSection from "./components/sections/FooterSection";
+import ReferencePage from "./components/pages/ReferencePage";
 
 export default function App() {
   const [os, setOs] = useState<OsType>("mac");
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [page, setPage] = useState<"home" | "reference">("home");
 
   useEffect(() => {
     if (isDarkMode) {
@@ -22,6 +24,14 @@ export default function App() {
       document.documentElement.classList.add("light-theme");
     }
   }, [isDarkMode]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
+
+  if (page === "reference") {
+    return <ReferencePage onBack={() => setPage("home")} />;
+  }
 
   return (
     <div className="min-h-screen bg-black text-zinc-300 font-sans selection:bg-orange-500/30">
@@ -36,8 +46,8 @@ export default function App() {
       <ShortcutsSection />
       <OneMoreThingSection />
       <TroubleshootingSection os={os} />
-      <FAQSection />
-      <FooterSection />
+      <FAQSection onNavigateReference={() => setPage("reference")} />
+      <FooterSection onNavigateReference={() => setPage("reference")} />
     </div>
   );
 }
