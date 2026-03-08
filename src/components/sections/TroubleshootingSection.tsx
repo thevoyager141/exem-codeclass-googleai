@@ -21,7 +21,7 @@ export default function TroubleshootingSection({ os }: { os: "mac" | "win" }) {
               <li>
                 File → Open Folder →{" "}
                 <code className="text-orange-300 bg-orange-500/10 px-1.5 py-0.5 rounded">
-                  exem-ai-curriculum-program
+                  Exem-ai-curriculum-program
                 </code>
               </li>
               <li>Cmd+J / Ctrl+J 터미널 열기</li>

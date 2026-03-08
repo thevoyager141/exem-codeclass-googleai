@@ -68,7 +68,7 @@ export default function HeroSection({
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-sm font-medium mb-8">
             <Sparkles size={14} />
-            <span>EXEM Claude Code Class</span>
+            <span>Exem Claude Code Class</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white leading-[1.1] mb-8">

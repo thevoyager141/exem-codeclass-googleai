@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 export default function FooterSection() {
   return (
     <footer className="py-32 relative overflow-hidden">
@@ -23,7 +21,7 @@ export default function FooterSection() {
         </a>
 
         <div className="mt-32 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
-          <div>© 2026 EXEM · Claude Code AI Training</div>
+          <div>© 2026 Exem · Claude Code AI Training</div>
           <div className="flex items-center gap-6">
             <span>피드백/오류 보고 → 조현서 그룹장</span>
             <a
